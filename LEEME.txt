@@ -1,0 +1,31 @@
+RAÍZ — prototipo PWA 0.2
+
+ARCHIVOS
+- index.html: interfaz y contenido del prototipo.
+- manifest.webmanifest: nombre, iconos y comportamiento de instalación.
+- service-worker.js: caché básica para abrir el shell de la app sin conexión después de la primera visita.
+- icons/: iconos de la app.
+
+PUBLICAR GRATIS CON GITHUB PAGES
+1. Desde una computadora o el navegador del celular, inicia sesión/crea una cuenta en GitHub.
+2. Crea un repositorio nuevo llamado raiz-devocionales. Si querés que el repositorio sea público para usar GitHub Pages gratis, no subas notas personales ni datos de usuarias: este paquete no contiene notas reales.
+3. Sube TODOS los archivos y conserva esta estructura: index.html, manifest.webmanifest, service-worker.js, icons/icon-192.png e icons/icon-512.png.
+4. En el repositorio entra en Settings > Pages.
+5. En Build and deployment, elige Deploy from a branch; selecciona la rama main y la carpeta /(root); guarda.
+6. Espera a que GitHub Pages muestre la URL publicada. Será una dirección bajo github.io; no se puede anticipar el enlace exacto hasta que GitHub lo cree.
+7. Abre esa URL en Chrome para Android. Menú ⋮ > Instalar aplicación o Añadir a pantalla de inicio (el texto puede variar).
+
+PRIVACIDAD
+- Las notas del prototipo se guardan con localStorage en el navegador del dispositivo; no se envían al servidor de GitHub Pages.
+- localStorage no está cifrado. Cualquier persona con acceso al perfil del navegador/dispositivo podría llegar a acceder a esos datos. No usar en dispositivos compartidos para información sensible.
+- Borrar los datos del navegador puede borrar las notas guardadas. El botón de la app permite borrar la nota.
+- No existe sincronización entre dispositivos, cuenta de usuario, analítica ni backend en esta versión.
+
+BIBLIA Y CONTENIDO
+- El prototipo muestra referencias bíblicas y pide leer el pasaje en una Biblia propia; no incluye texto bíblico extenso.
+- La opción NTV/RVR1960 orienta qué edición usar para consultar el pasaje; no genera por sí sola una comparación del texto entre traducciones.
+- Antes de distribuir devocionales, revisa referencias, contexto y aplicaciones. Evita presentar una emoción o una interpretación como una revelación infalible de Dios.
+
+LIMITACIONES
+- Service workers y la instalación PWA requieren HTTPS o localhost; abrir el archivo HTML directamente no activa esas funciones.
+- La caché permite volver a abrir la app shell después de visitar la web publicada una vez, pero no reemplaza pruebas reales en distintos dispositivos.
